@@ -1,0 +1,17 @@
+<div class="text-center row">
+
+    <h2>{{data.reeting}}</h2>
+    <h4>{{data.instructions}}</h4>
+    <div ng-click="alert()"><img src="/Hangman/partials/hangman6.gif"></div>
+    <br/>
+    <br/>
+
+    <div class="clearfix">
+
+        <form ng-submit="setKeyword(data.keyword)">
+            <input type="text" ng-model="data.keyword" autofocus/>
+            <button type="submit" btn-lg ng-click="setKeyword(data.keyword)">Submit</button>
+        </form>
+    </div>
+
+</div>

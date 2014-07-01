@@ -1,0 +1,42 @@
+<div class="text-center">
+    <span class="row label-primary"><h1>{{greeting}}</h1></span>
+
+
+
+    <div class="container">
+        <div class="row center">
+            <span style="display:inline-block" ng-repeat="n in underscoreArray track by $index">
+                <h4>{{underscoreArray[$index]}}<span>&nbsp;</span></h4>
+            </span>
+        </div>
+
+        <div class="clearfix"></div>
+
+        <div class="row"
+            <span class="col-md-1" style="display:inline-block" ng-repeat="n in data.guessPool track by $index">
+                <h4>{{data.guessPool[$index]}}</h4>
+            </span>
+        </div>
+
+        <div class="clearfix"></div>
+
+        <div class="row">
+            <p>You have <strong>{{countdown}}</strong> guesses left.</p>
+        </div>
+
+    </div>
+
+    <div class="row col-centered">
+        <form ng-submit='(submitGuess(data.tempGuess))'>
+            <input type="text" ng-model="data.tempGuess" autofocus/>
+            <input type="submit" value="Guess"/>
+        </form>
+    </div>
+
+    <br/>
+    <br/>
+    <br/>
+    <!-- <a href="#/initgame"><button btn-lg ng-show="countdown == 0 || gameWon">Play again</button></a> -->
+
+
+</div>
